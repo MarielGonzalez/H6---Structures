@@ -10,11 +10,12 @@ int main(void) {
   printf("1 - Imprimir Numeros Impares hasta el 201 \n");
   printf("2 - Determinar la categoria de edad de una persona \n");
 
-	// * Tomar Input del usuario
+	
 	
 	// * Ejecutar ejercicio segun opcion
 	bool status = true;
 	while(status){
+		// * Tomar Input del usuario
 		int input;
 		scanf("%d", &input);
 		switch(input){
@@ -37,14 +38,27 @@ int main(void) {
 
 void printOddNumbers(){
 
-	printf("calling printOddNumbers()");
+	//printf("calling printOddNumbers()\n");
 
-	// TODO: imprimir impares usando FOR
+	// TODO: imprimir impares hasta el 201 usando FOR
+	printf("Numero impares hasta el 201 usando la sentencia 'FOR'\n");
+   
+  int impar = 1;
+  int i;
+
+  for(i=0 ;impar<=201;i++){
+    
+		printf("%d \n",impar);
+    impar+=2; 
+
+    
+
 
 	// TODO: imprimir impares usando WHILE
 
 	// TODO: imprimir impares usando DO-WHILE
 
+}
 }
 
 // TODO: Hacer un programa en C que lea la edad de una persona y determinar: 
