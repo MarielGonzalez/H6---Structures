@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <curses.h> 
+#include <stdio.h>
 
 void printOddNumbers();
 void determineAgeCategory();
@@ -51,14 +53,24 @@ void printOddNumbers(){
 		printf("%d \n",impar);
     impar+=2; 
 
-    
 
-
-	// TODO: imprimir impares usando WHILE
-
-	// TODO: imprimir impares usando DO-WHILE
 
 }
+	// TODO: imprimir impares usando WHILE
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// TODO: imprimir impares usando DO-WHILE
 }
 
 // TODO: Hacer un programa en C que lea la edad de una persona y determinar: 
@@ -68,17 +80,44 @@ void determineAgeCategory(){
 
 	printf("calling determineAgeCategory()");
 
+
+	 int edad;
+
+    printf( "\n   Introduzca edad: " );
+    scanf( "%d", &edad );
+
+    if ( edad >= 0 && edad <= 122 )
+        if ( edad < 3 )
+            printf( "\n   BEBE" );
+        else
+            if ( edad < 14 )
+                printf( "\n   NINO" );
+            else
+                if ( edad < 18 )
+                    printf( "\n   ADOLESCENTE" );
+                    else
+                        if ( edad < 60 )
+                            printf( "\n   ADULTO" );
+                        else
+                            printf( "\n   ANCIANO" );
+    else
+        printf( "\n   ERROR: Edad incorrecta." );
+
+    getchar();
+
+     
 	/*	
 		Categorias:
-		Primera Infancia 	(0-5 años)
-		Infancia 					(6 - 11 años)
-		Adolescencia 			(12 - 18 años)
-		Juventud 					(14 - 26 años)
-		Adultez 					(27- 59 años)
-		Persona Mayor 		(60 años o mas) envejecimiento y vejez 
+	  Bebe              (0  -  2 años)
+		Nino              (3  - 13 años)
+		Adolescente 	  	(14 - 18 años)
+		Adulto  					(19 - 59 años)
+		Anciano 	      	(60 años o mas)  
 	*/
 
 }
 
+
+   
 
 
