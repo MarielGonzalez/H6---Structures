@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <curses.h> 
 #include <stdio.h>
+#include <ctype.h>
 
 void printOddNumbers();
 void determineAgeCategory();
@@ -40,45 +41,57 @@ int main(void) {
 
 void printOddNumbers(){
 
-	//printf("calling printOddNumbers()\n");
+	int impar = 1;
+  int i;
+	char eleccion;
 
 	// TODO: imprimir impares hasta el 201 usando FOR
-	printf("Numero impares hasta el 201 usando la sentencia 'FOR'\n");
+	printf("Escoja con cual estructura desea ejecutar el ejercicio:\n");
+	printf("F - SENTENCIA FOR \n");
+  printf("W - SENTENCIA WHILE \n");
+	printf("D - SENTENCIA DO-WHILE \n");
    
-  int impar = 1;
-  int i;
+  
+	eleccion=getchar();
 
-  for(i=0 ;impar<=201;i++){
-    
-		printf("%d \n",impar);
+ switch(eleccion=toupper(eleccion)){
+		case 'F':
+		 printf("NUMEROS IMPARES DEL 1 AL 201 CON SENTENCIA FOR \n");
+		for(i=0 ;impar<=201;i++){
+    printf("%d \n",impar);
     impar+=2; 
+	  };
+		break;
 
+   case 'W':
+   printf("NUMEROS IMPARES DEL 1 AL 201 CON SENTENCIA WHILE \n");
+   while(impar<=201) {
+	 printf("%d \n",impar);
+	 impar+=2;
+	 };
+    break;
 
+  case 'D':
+   do{
+   printf("%d \n",impar);
+   impar+=2;
+    
+  }while(impar<=201); 
+	break;
+
+  default: printf("opcion no valida");
+   
+    
+   
+ }
+ getchar();
 
 }
-	// TODO: imprimir impares usando WHILE
 
-
-
-
-
-
-
-
-
-
-
-
-
-	// TODO: imprimir impares usando DO-WHILE
-}
-
-// TODO: Hacer un programa en C que lea la edad de una persona y determinar: 
-// si la persona es un bebé, si es un niño, si es un adolescente, si es un adulto o si es un ancianito. 
-// Uso de estructuras selectivas If-Else y operadores lógicos-relacionales.
+	
 void determineAgeCategory(){
 
-	printf("calling determineAgeCategory()");
+	//printf("calling determineAgeCategory()");
 
 
 	 int edad;
