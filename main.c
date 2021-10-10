@@ -103,12 +103,15 @@ void determineAgeCategory(){
 	*/
 
 
-	 int edad;
+char option;
+int edad;
+ do{
+  
+    printf( "\n   Introduzca edad: " );
+    scanf( "%du", &edad );
 
-    printf( "\n   Introduzca la edad: " );
-    scanf( "%d", &edad );
 
- if ( edad >= 0 && edad <= 122 )
+   if ( edad >= 0 && edad <= 122 )
         if ( edad <= 3 )
             printf( "La edad ingresada es la de un BEBE \n \t" );
         else
@@ -127,10 +130,19 @@ void determineAgeCategory(){
                              else
                              printf( "La edad ingresada es la de un ANCIANO \n \t" );
                     
-  else 
-      printf( "   ERROR: Favor introduzca un margen de edad valido.\n" );
+        else 
+    	
+            printf( "   ERROR: Favor introduzca un margen de edad valido.\n" );
             
              getchar();
+             //clrscr ();
+        
+        
+        printf( "Desea continuar....SI(S)/NO(N)?" );
+        scanf("%s", &option);        
+          
+        }while((option='S' && option!='N'));
+       
      
 	}
 
