@@ -1,3 +1,28 @@
+![](https://upload.wikimedia.org/wikipedia/commons/e/e4/LOGO_UNAPEC.png)
+
+# PROGRAMACION ESTRUCTURADA
+
+> GRUPO 2
+>>INTEGRANTES:
+1. Scarlett Mariel González            A00106364
+2. Charlie de León Duran               A00108707
+3. Claudio D. Sánchez                  A00108032
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Práctica \#6. 
 ## Para realizar en en transcurso de la semana. Estructuras de Control Selectivas, Secuenciales, Repetitivas: If-Else-Switch, While, For, Do... While 
 
