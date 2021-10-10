@@ -8,24 +8,24 @@ void printOddNumbers();
 void determineAgeCategory();
 
 int main(void) {
-	// * Imprimir Menu
-  printf("Elija el programa a ejecutar \n");
-  printf("1 - Imprimir Numeros Impares hasta el 201 \n");
-  printf("2 - Determinar la categoria de edad de una persona \n");
-
-	// * Ejecutar ejercicio 1 segun opciones
 	bool status = true;
 	while(status){
 		// * Tomar Input del usuario
+		printf("Elija el programa a ejecutar \n");
+		printf("1 - Imprimir Numeros Impares hasta el 201 \n");
+		printf("2 - Determinar la categoria de edad de una persona \n");
+		printf("3 - Salir \n");
 		int input;
 		scanf("%d", &input);
 		switch(input){
 			case 1:
 				printOddNumbers();
-				status = false;
 				break;
 			case 2:
 				determineAgeCategory();
+				break;
+			case 3: 
+				printf("Gracias por venir. Vuelva Pronto!");
 				status = false;
 				break;
 			default:
@@ -38,21 +38,19 @@ int main(void) {
 
 void printOddNumbers(){
 
-char option;
+	char option;
 
 	do{
 		int impar = 1;
 		int i;
 		char eleccion;
 		
-		// TODO: imprimir impares hasta el 201 usando FOR
 		printf("Escoja con cual estructura desea ejecutar el ejercicio:\n");
 		printf("F - SENTENCIA FOR \n");
 		printf("W - SENTENCIA WHILE \n");
 		printf("D - SENTENCIA DO-WHILE \n");
 		
 		scanf("%s", &eleccion);
-		//eleccion=getchar();
 
 		switch(eleccion){
 			case 'F':
@@ -63,6 +61,7 @@ char option;
 				impar+=2; 
 				};
 				break;
+				
 			case 'W':
 				// * Sentencia While
 				printf("NUMEROS IMPARES DEL 1 AL 201 CON SENTENCIA WHILE \n");
@@ -88,26 +87,12 @@ char option;
 		scanf("%s", &option);
 	
 	}while((option='S' && option!='N'));
-
-	printf( "FIN DEL PROGRAMA.\n" );
-	getchar();
 }
 
 	
 
 
 void determineAgeCategory(){
-
-	//printf("Tomando en cuenta el siguiente rango de edades:");
-	/*	
-		Categorias:
-	  Bebe              (0  -  3 años)
-		Niño              (4  - 11 años)
-		Adolescente 	  	(12 - 18 años)
-		Joven     				(19 - 35 años)
-		Adulto  					(36 - 70 años)
-		Anciano 	      	(70 años o mas)  
-	*/
 	char option;
 	int edad;
 	do{
@@ -137,13 +122,4 @@ void determineAgeCategory(){
 		scanf("%s", &option);        
 						
 	}while((option='S' && option!='N'));
-
-	printf( "FIN DEL PROGRAMA.\n" );
-
-	getchar();
 }
-
-
-   
-
-
