@@ -15,7 +15,7 @@ int main(void) {
 
 	
 	
-	// * Ejecutar ejercicio segun opcion
+	// * Ejecutar ejercicio 1 segun opciones
 	bool status = true;
 	while(status){
 		// * Tomar Input del usuario
@@ -41,9 +41,14 @@ int main(void) {
 
 void printOddNumbers(){
 
+char option;
+
+	do{
+
 	int impar = 1;
   int i;
 	char eleccion;
+	
 
 	// TODO: imprimir impares hasta el 201 usando FOR
 	printf("Escoja con cual estructura desea ejecutar el ejercicio:\n");
@@ -80,11 +85,19 @@ void printOddNumbers(){
 	break;
 
   default: printf("opcion no valida");
+
+ 
    
-    
-   
- }
- getchar();
+}
+
+ printf( "Desea continuar....SI(S)/NO(N)?\t \n" );
+ scanf("%s", &option);
+ 
+}while((option='S' && option!='N'));
+    printf( "FIN DEL PROGRAMA.\n" );
+    getchar();
+ 	 
+
 
 }
 
@@ -138,10 +151,12 @@ int edad;
              //clrscr ();
         
         
-        printf( "Desea continuar....SI(S)/NO(N)?" );
+        printf( "Desea continuar....SI(S)/NO(N)?\t \n" );
         scanf("%s", &option);        
           
         }while((option='S' && option!='N'));
+       printf( "FIN DEL PROGRAMA.\n" );
+
        
      
 	}
