@@ -94,38 +94,43 @@ void determineAgeCategory(){
 	//printf("Tomando en cuenta el siguiente rango de edades:");
 	/*	
 		Categorias:
-	  Bebe              (0  -  2 años)
-		Nino              (3  - 13 años)
-		Adolescente 	  	(14 - 18 años)
-		Adulto  					(19 - 59 años)
-		Anciano 	      	(60 años o mas)  
+	  Bebe              (0  -  3 años)
+		Niño              (4  - 11 años)
+		Adolescente 	  	(12 - 18 años)
+		Joven     				(19 - 35 años)
+		Adulto  					(36 - 70 años)
+		Anciano 	      	(70 años o mas)  
 	*/
 
 
 	 int edad;
 
-    printf( "\n   Introduzca edad: " );
+    printf( "\n   Introduzca la edad: " );
     scanf( "%d", &edad );
 
-    if ( edad >= 0 && edad <= 122 )
-        if ( edad < 3 )
-            printf( "\n   BEBE" );
+ if ( edad >= 0 && edad <= 122 )
+        if ( edad <= 3 )
+            printf( "La edad ingresada es la de un BEBE \n \t" );
         else
-            if ( edad < 14 )
-                printf( "\n   NINO" );
+            if ( edad <= 11 )
+                printf( "La edad ingresada es la de un NIñO \n \t" );
             else
-                if ( edad < 18 )
-                    printf( "\n   ADOLESCENTE" );
+                if ( edad <=18 )
+                   printf( "La edad ingresada es la de un ADOLESCENTE \n \t" );
+                    
                     else
-                        if ( edad < 60 )
-                            printf( "\n   ADULTO" );
+                        if ( edad <= 35 && edad>=19 )
+                           printf( "La edad ingresada es la de un JOVEN \n \t" );
                         else
-                            printf( "\n   ANCIANO" );
-    else
-        printf( "\n   ERROR: Edad incorrecta." );
-
-    getchar();
-
+                             if ( edad >35 && edad<=70 )
+                             printf( "La edad ingresada es la de un ADULTO \n \t" );
+                             else
+                             printf( "La edad ingresada es la de un ANCIANO \n \t" );
+                    
+  else 
+      printf( "   ERROR: Favor introduzca un margen de edad valido.\n" );
+            
+             getchar();
      
 	}
 
