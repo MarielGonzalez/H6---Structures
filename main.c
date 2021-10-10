@@ -51,12 +51,12 @@ void printOddNumbers(){
   printf("W - SENTENCIA WHILE \n");
 	printf("D - SENTENCIA DO-WHILE \n");
    
-  
-	eleccion=getchar();
+  scanf("%s", &eleccion);
+	//eleccion=getchar();
 
- switch(eleccion=toupper(eleccion)){
+ switch(eleccion){
 		case 'F':
-		 printf("NUMEROS IMPARES DEL 1 AL 201 CON SENTENCIA FOR \n");
+		printf("NUMEROS IMPARES DEL 1 AL 201 CON SENTENCIA FOR \n");
 		for(i=0 ;impar<=201;i++){
     printf("%d \n",impar);
     impar+=2; 
@@ -91,7 +91,15 @@ void printOddNumbers(){
 	
 void determineAgeCategory(){
 
-	//printf("calling determineAgeCategory()");
+	//printf("Tomando en cuenta el siguiente rango de edades:");
+	/*	
+		Categorias:
+	  Bebe              (0  -  2 años)
+		Nino              (3  - 13 años)
+		Adolescente 	  	(14 - 18 años)
+		Adulto  					(19 - 59 años)
+		Anciano 	      	(60 años o mas)  
+	*/
 
 
 	 int edad;
@@ -119,16 +127,7 @@ void determineAgeCategory(){
     getchar();
 
      
-	/*	
-		Categorias:
-	  Bebe              (0  -  2 años)
-		Nino              (3  - 13 años)
-		Adolescente 	  	(14 - 18 años)
-		Adulto  					(19 - 59 años)
-		Anciano 	      	(60 años o mas)  
-	*/
-
-}
+	}
 
 
    
